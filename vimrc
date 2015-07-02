@@ -1,12 +1,12 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 
 if has('vim_starting')
-	if &compatible
-		set nocompatible               " Be iMproved
-	endif
+    if &compatible
+        set nocompatible               " Be iMproved
+    endif
 
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+    " Required:
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -183,8 +183,8 @@ nmap tt :%s/\t/    /g<CR>
 
 " Help {{
 if version >= 603
-	set helplang=cn
-	set encoding=utf-8
+    set helplang=cn
+    set encoding=utf-8
 endif
 " }}
 
@@ -211,54 +211,54 @@ nnoremap <leader>rd :e ~/.vim/ <CR>
 " GUI Settings {{
 " GVIM- (heree instead of .gvimrc
 if has('gui_running')
-	set guioptions=cMg " console dialogs, do not show menu and toolbar
-	set lines=40
+    set guioptions=cMg " console dialogs, do not show menu and toolbar
+    set lines=40
 else
-	set term=builtin_ansi
+    set term=builtin_ansi
 endif
 " }}
 
 " Util Functions {{
 function! InitializeDirectories()
-	let separator = "."
-	let parent = $HOME
-	let prefix = ".vim"
-	let dir_list = {'backup' : 'backupdir', 'views' : 'viewdir', 'swap' : 'directory' }
-	for [dirname, settingname] in items(dir_list)
-		let directory = parent . '/' . prefix . dirname . "/"
-		if exists("*mkdir")
-			if !isdirectory(directory)
-				call mkdir(directory)
-			endif
-		endif
-		if !isdirectory(directory)
-			echo "Warning: Unable to create backup directory: " . directory
-			echo "Try: mkdir -p " . directory
-		else
-			let directory = substitute(directory, " " , "\\\\ ", "")
-			exec "set " . settingname . "=" . directory
-		endif
-	endfor
+    let separator = "."
+    let parent = $HOME
+    let prefix = ".vim"
+    let dir_list = {'backup' : 'backupdir', 'views' : 'viewdir', 'swap' : 'directory' }
+    for [dirname, settingname] in items(dir_list)
+        let directory = parent . '/' . prefix . dirname . "/"
+        if exists("*mkdir")
+            if !isdirectory(directory)
+                call mkdir(directory)
+            endif
+        endif
+        if !isdirectory(directory)
+            echo "Warning: Unable to create backup directory: " . directory
+            echo "Try: mkdir -p " . directory
+        else
+            let directory = substitute(directory, " " , "\\\\ ", "")
+            exec "set " . settingname . "=" . directory
+        endif
+    endfor
 endfunction
 " call InitializeDirectories()
 
 function! NERDTreeInitAsNeeded()
-	redir => bufoutput
-	buffers!
-	redir END
-	let idx = stridx(bufoutput, "NERD_tree")
-	if idx > -1
-		NERDTreeMirror
-		NERDTreeFind
-		wincmd l
-	endif
+    redir => bufoutput
+    buffers!
+    redir END
+    let idx = stridx(bufoutput, "NERD_tree")
+    if idx > -1
+        NERDTreeMirror
+        NERDTreeFind
+        wincmd l
+    endif
 endfunction
 
 " }}
 
 " Use local vimrc if available {{
 if filereadable(expand("~/.vimrc.local"))
-	source ~/.vimrc.local
+    source ~/.vimrc.local
 endif
 " }}
 
@@ -285,14 +285,14 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 " Create New File {{
 autocmd BufNewFile *.sh,*.rb,*.py exec ":call SetTile()"
 func! SetTile()
-	if &filetype == 'sh'
-		call setline(1, "\#!/bin/bash")
-		call append(line("."), "")
-	elseif &filetype == 'python'
-		call setline(1, "\#!/usr/bin/env python")
-		call append(line("."), "\# coding=utf-8")
-		call append(line(".") + 1, "")
-	endif
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/bash")
+        call append(line("."), "")
+    elseif &filetype == 'python'
+        call setline(1, "\#!/usr/bin/env python")
+        call append(line("."), "\# coding=utf-8")
+        call append(line(".") + 1, "")
+    endif
 endfunc
 autocmd BufNewFile * normal G
 

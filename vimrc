@@ -40,6 +40,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " --//language bundles
 NeoBundle 'elzr/vim-json'
+NeoBundle 'groovy.vim'
+NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'gmarik/vim-markdown'
 NeoBundle 'vim-coffee-script'
 au BufWritePost *.coffee silent CoffeeMake!
@@ -89,6 +91,8 @@ nnoremap <leader>ea :CtrlP app/assets<cr>
 nnoremap <leader>ep :CtrlP public<cr>
 nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
+
+NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 
 call neobundle#end()
 

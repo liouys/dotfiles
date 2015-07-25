@@ -60,6 +60,7 @@ inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 NeoBundle 'airblade/vim-gitgutter'
 
+NeoBundle 'saltstack/salt-vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>

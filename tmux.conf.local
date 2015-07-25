@@ -6,7 +6,7 @@
 #tmux_conf_battery_symbol_count=5
 
 # use the heat palette for the battery status
-#tmux_conf_battery_palette=heat
+tmux_conf_battery_palette=heat
 
 # display the battery status: charging (U+26A1) / discharging (U+1F50B)
 #tmux_conf_battery_status=true

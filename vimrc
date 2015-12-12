@@ -93,6 +93,8 @@ nnoremap <leader>ep :CtrlP public<cr>
 nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
+NeoBundle 'fatih/vim-go'
+
 NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 
 call neobundle#end()

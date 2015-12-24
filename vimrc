@@ -25,6 +25,8 @@ let mapleader=','
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \	'mac' : 'make -f make_mac.mak',
+\   'linux' : 'make',
+\   'unix' : 'gmake',
 \	},
 \}
 NeoBundle 'Shougo/neocomplcache.vim'

@@ -36,9 +36,12 @@ NeoBundle 'Shougo/vimshell.vim'
 " --//gui bundles
 NeoBundle 'bling/vim-airline'
 set laststatus=2
+set encoding=utf-8
 let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " --//language bundles
 NeoBundle 'elzr/vim-json'
@@ -76,6 +79,7 @@ let NERDTreeChDirMode=0
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
+let g:NERDTreeWinSize = 35
 
 NeoBundle 'L9' " function utility library.
 NeoBundle 'Shougo/unite.vim'
@@ -99,6 +103,14 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'hhys/yaml-vim'
 
 NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
+
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'Lokaltog/vim-powerline'
+
+" Javascripts
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+
 
 call neobundle#end()
 
@@ -129,7 +141,7 @@ let g:is_posix = 1
 
 " vim gui
 set tabpagemax=15
-set showmode
+set noshowmode " hide the default mode text (e.g. -- INSERT -- below the statusline)
 set cursorline
 set shortmess=atI
 color desert
@@ -153,6 +165,34 @@ filetype indent on
 
 nmap tt :%s/\t/    /g<CR>
 
+" Open new split panes to right and bottom, which feels or natural
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Easy escaping to normal model
+imap jj <esc>
+imap jk <esc>
+
+" Move to the next buffer
+nmap <leader>. :bnext<CR>
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
+" Split window Resize
+"nmap <C-v> :vertical resize +5<CR>
+"nmap <C-m> :vertical resize -5<CR>
+
 " formatting
 set nowrap
 set autoindent
@@ -161,6 +201,8 @@ set expandtab
 set tabstop=4
 set softtabstop=5
 set matchpairs+=<:>
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Key (re)Mappings
 nnoremap <leader>rs :source ~/.vimrc<CR>

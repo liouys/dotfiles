@@ -48,9 +48,6 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'groovy.vim'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'gmarik/vim-markdown'
-NeoBundle 'vim-coffee-script'
-au BufWritePost *.coffee silent CoffeeMake!
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 NeoBundle 'scrooloose/syntastic'
 
 " --//tools bundles
@@ -65,7 +62,6 @@ inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 NeoBundle 'airblade/vim-gitgutter'
 
-NeoBundle 'saltstack/salt-vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
@@ -99,6 +95,7 @@ nnoremap <leader>ep :CtrlP public<cr>
 nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
+" go-lang
 NeoBundle 'fatih/vim-go'
 NeoBundle 'hhys/yaml-vim'
 
@@ -110,6 +107,11 @@ NeoBundle 'Lokaltog/vim-powerline'
 " Javascripts
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
+
+" configure management
+NeoBundle 'saltstack/salt-vim'
+NeoBundle 'pearofducks/ansible-vim'
+
 
 
 call neobundle#end()

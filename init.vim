@@ -1,44 +1,14 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-
-if has('vim_starting')
-    if &compatible
-        set nocompatible               " Be iMproved
-    endif
-
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
 " everything start here...
 
+syntax on
 let mapleader=','
 
-" --//dep bundles
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\	'mac' : 'make -f make_mac.mak',
-\   'linux' : 'make',
-\   'unix' : 'gmake',
-\	},
-\}
-NeoBundle 'Shougo/neocomplcache.vim'
-let g:neocomplcache_enable_at_startup = 1
-NeoBundle 'Shougo/vimshell.vim'
+" Required:
+call plug#begin('~/.config/nvim/plugged')
 
 " core plugins
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'kien/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_window_bottom=1
@@ -55,9 +25,9 @@ nnoremap <leader>er :topleft :vsplit config/routes.rb<cr>
 nnoremap <leader>eg :topleft :vsplit Gemfile<cr>
 
 " --//vim main plugins
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
+Plug 'sjl/gundo.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
 set encoding=utf-8
 let g:airline_section_b = '%{strftime("%c")}'
@@ -66,11 +36,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"NeoBundle 'jlanzarotta/bufexplorer'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'vim-scripts/tComment'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-fugitive'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/tComment'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 nnoremap <leader>W :Gwrite<CR>
 nnoremap <leader>C :Gcommit -v<CR>
 nnoremap <leader>S :Gstatus \| 7<CR>
@@ -78,19 +48,20 @@ inoremap <leader>W <Esc><leader>W
 inoremap <leader>C <Esc><leader>C
 inoremap <leader>S <Esc><leader>S
 
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'xolox/vim-session'
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'easymotion/vim-easymotion'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'godlygeek/tabular'
+Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
+Plug 'terryma/vim-multiple-cursors'
 
 " --// togglable panels
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 map <leader>nt :NERDTreeFind<CR>
@@ -103,52 +74,53 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
 let g:NERDTreeWinSize = 35
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'majutsushi/tagbar'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-scripts/taglist.vim'
+Plug 'majutsushi/tagbar'
 
 " --//language bundle
-NeoBundle 'elzr/vim-json'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'marijnh/tern_for_vim'
+Plug 'othree/javascript-libraries-syntax.vim'
 
-NeoBundle 'fatih/vim-go'
-NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'vim-scripts/c.vim'
-NeoBundle 'groovy.vim'
-NeoBundle 'vim-gradle'
-NeoBundle 'hhys/yaml-vim'
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-scripts/c.vim'
+Plug 'groovy.vim'
+Plug 'vim-gradle'
+Plug 'hhys/yaml-vim'
 
 " --// database
-NeoBundle 'vim-scripts/SQLUtilities'
-NeoBundle 'NagatoPain/AutoSQLUpperCase.vim'
+Plug 'vim-scripts/SQLUtilities'
+Plug 'NagatoPain/AutoSQLUpperCase.vim'
 
 " --// autocomplete
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 
 " --// snippets
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-NeoBundle 'L9' " function utility library.
-NeoBundle 'Shougo/unite.vim'
+Plug 'L9' " function utility library.
+Plug 'Shougo/unite.vim'
 
 " --// configure management tools 
-NeoBundle 'saltstack/salt-vim'
-NeoBundle 'pearofducks/ansible-vim'
+Plug 'saltstack/salt-vim'
+Plug 'pearofducks/ansible-vim'
 
-call neobundle#end()
+" -- for fun...
+Plug 'uguu-org/vim-matrix-screensaver'
+
+call plug#end()
 
 " enable all the plugin
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
 
 " General
 syntax on
@@ -173,7 +145,6 @@ set tabpagemax=15
 set noshowmode " hide the default mode text (e.g. -- INSERT -- below the statusline)
 set cursorline
 set shortmess=atI
-colorscheme candyman
 autocmd InsertLeave * set cul
 set scrolloff=3
 set showcmd
@@ -269,3 +240,13 @@ endif
 
 " enable angular syntax
 let g:used_javascript_libs = 'jquery,angularjs'
+
+" multiple cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+let g:session_autoload="no"
+colorscheme candyman

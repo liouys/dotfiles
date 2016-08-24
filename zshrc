@@ -13,14 +13,21 @@ fi
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias vim="nvim"
+alias vi="nvim"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/workspace/gocodes
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/apps/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
-export GROOVY_HOME=~/dev/antly/tools/java/groovy
-export GRADLE_HOME=~/dev/antly/tools/java/gradle
-export M2_HOME=~/dev/antly/tools/java/maven
-export ANT_HOME=~/dev/antly/tools/java/ant
-export PATH=$GRADLE_HOME/bin:$GRADLE_HOME/bin:$M2_HOME/bin:$ANT_HOME/bin:$PATH
 
+export ANTLY_HOME=~/dev/antly
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export GRADLE_HOME=/usr/local/Cellar/gradle/2.12/libexec
+
+# -- gradle uploadArchives task variables.
+export PUBLISH_URL=http://localhost:8081/content/repositories/ctg-release
+export PUBLISH_USER=admin
+export PUBLISH_PASSWORD=Nexus@2016
+
+export PATH=~/.npm-global/bin:$PATH

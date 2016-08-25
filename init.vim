@@ -1,5 +1,10 @@
 " everything start here...
 
+" 设置文件编码
+set fenc=utf-8
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+" 启动语法检查
 syntax on
 let mapleader=','
 
@@ -29,7 +34,6 @@ Plug 'sjl/gundo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 set laststatus=2
-set encoding=utf-8
 let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
@@ -57,6 +61,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_leader_key = ','
 Plug 'terryma/vim-multiple-cursors'
 
 " --// togglable panels
@@ -153,7 +158,9 @@ set hlsearch
 set wildmenu
 set foldenable
 
+" 显示行号
 set number
+set relativenumber
 set cmdheight=2
 set langmenu=none
 source $VIMRUNTIME/delmenu.vim
@@ -249,4 +256,14 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 let g:session_autoload="no"
+let g:session_autosave="no"
+let g:session_command_aliase = 1
 colorscheme candyman
+
+" tabs
+nmap <leader>tn :tabnew<cr>
+nmap <leader>te : tabedit<cr>
+nmap <leader>tc : tabclose<cr>
+nmap <leader>tm : tabmove<cr>
+
+:map <leader>w <C-w>w

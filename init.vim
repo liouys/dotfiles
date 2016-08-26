@@ -5,7 +5,7 @@ set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
 " 启动语法检查
-syntax on
+syntax enable
 let mapleader=','
 
 " Required:
@@ -40,7 +40,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-Plug 'jlanzarotta/bufexplorer'
+"Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-surround'
@@ -104,6 +104,8 @@ Plug 'NagatoPain/AutoSQLUpperCase.vim'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+Plug 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
 
 " --// snippets
 "Plug 'SirVer/ultisnips'
@@ -134,7 +136,6 @@ set clipboard=unnamed
 set history=1000
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd FileType python setlocal foldmethod=indent
-set foldlevel=99
 set noswapfile " no create swap file when open file.
 set nobackup
 set nowritebackup
@@ -155,8 +156,22 @@ set scrolloff=3
 set showcmd
 set incsearch
 set hlsearch
+nnoremap <leader><space> :nohlsearch<CR>
 set wildmenu
 set foldenable
+set foldlevelstart=10
+set foldlevel=99
+set foldmethod=indent
+nnoremap <space> za
+
+nnoremap j gj
+nnoremap k gk
+
+nnoremap B ^
+nnoremap E $
+
+nnoremap ^ <nop>
+nnoremap $ <nop>
 
 " 显示行号
 set number
@@ -183,8 +198,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Easy escaping to normal model
-imap jj <esc>
-imap jk <esc>
+inoremap jk <esc>
 
 " Move to the next buffer
 nmap <leader>. :bnext<CR>
@@ -212,10 +226,11 @@ set matchpairs+=<:>
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Key (re)Mappings
-nnoremap <leader>rs :source ~/.vimrc<CR>
-nnoremap <leader>rt :tabnew ~/.vim/vimrc<CR>
-nnoremap <leader>re :e ~/.vim/vimrc<CR>
-nnoremap <leader>rd :e ~/.vim/ <CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc <CR>
+
+nnoremap <leader>s :mksession<CR>
 
 " Use local vimrc if available {{
 if filereadable(expand("~/.vimrc.local"))
@@ -267,3 +282,4 @@ nmap <leader>tc : tabclose<cr>
 nmap <leader>tm : tabmove<cr>
 
 :map <leader>w <C-w>w
+

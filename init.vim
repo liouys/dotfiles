@@ -102,6 +102,8 @@ Plug 'NagatoPain/AutoSQLUpperCase.vim'
 
 " --// autocomplete
 "Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup=1
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 
@@ -258,7 +260,7 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:session_autoload="no"
 let g:session_autosave="no"
 let g:session_command_aliase = 1
-colorscheme candyman
+"colorscheme candyman
 
 " tabs
 nmap <leader>tn :tabnew<cr>

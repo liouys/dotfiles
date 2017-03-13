@@ -95,6 +95,11 @@ Plug 'vim-scripts/c.vim'
 Plug 'groovy.vim'
 Plug 'vim-gradle'
 Plug 'hhys/yaml-vim'
+Plug 'vim-scripts/nginx.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+Plug 'vim-scripts/Sass'
+Plug 'gko/vim-coloresque'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

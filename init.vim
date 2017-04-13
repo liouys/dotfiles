@@ -99,6 +99,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtomDarkholme/yats.vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'clausreinke/typescript-tools.vim'
+Plug 'vim-scripts/nginx.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+Plug 'vim-scripts/Sass'
+Plug 'gko/vim-coloresque'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'
@@ -106,6 +111,8 @@ Plug 'NagatoPain/AutoSQLUpperCase.vim'
 
 " --// autocomplete
 "Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup=1
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'Shougo/neocomplete.vim'
@@ -221,10 +228,10 @@ nmap <leader>bl :ls<CR>
 " formatting
 set nowrap
 set autoindent
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
-set tabstop=4
-set softtabstop=5
+set tabstop=2
+set softtabstop=2
 set matchpairs+=<:>
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -277,7 +284,7 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:session_autoload="no"
 let g:session_autosave="no"
 let g:session_command_aliase = 1
-colorscheme candyman
+"colorscheme candyman
 
 " tabs
 nmap <leader>tn :tabnew<cr>

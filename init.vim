@@ -40,7 +40,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"Plug 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-surround'
@@ -95,6 +95,10 @@ Plug 'vim-scripts/c.vim'
 Plug 'groovy.vim'
 Plug 'vim-gradle'
 Plug 'hhys/yaml-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'HerringtomDarkholme/yats.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'clausreinke/typescript-tools.vim'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'
@@ -108,7 +112,7 @@ Plug 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
 
 " --// snippets
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'L9' " function utility library.
@@ -282,4 +286,5 @@ nmap <leader>tc : tabclose<cr>
 nmap <leader>tm : tabmove<cr>
 
 :map <leader>w <C-w>w
+
 

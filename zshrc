@@ -8,13 +8,11 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vim="nvim"
-alias vi="nvim"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/workspace/gocodes
@@ -31,3 +29,5 @@ export PUBLISH_USER=admin
 export PUBLISH_PASSWORD=Nexus@2016
 
 export PATH=~/.npm-global/bin:$PATH
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

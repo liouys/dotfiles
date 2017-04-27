@@ -222,8 +222,10 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 " Split window Resize
-"nmap <C-v> :vertical resize +5<CR>
-"nmap <C-m> :vertical resize -5<CR>
+nnoremap <S-Right> :vertical resize -5<CR>
+nnoremap <S-Left> :vertical resize +5<CR>
+nnoremap <S-Down> :resize -5<CR>
+nnoremap <S-Up> :resize +5<CR>
 
 " formatting
 set nowrap
@@ -292,6 +294,7 @@ nmap <leader>te : tabedit<cr>
 nmap <leader>tc : tabclose<cr>
 nmap <leader>tm : tabmove<cr>
 
+" switch windows
 :map <leader>w <C-w>w
 
 

@@ -222,10 +222,10 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 " Split window Resize
-nnoremap <S-Right> :vertical resize -5<CR>
-nnoremap <S-Left> :vertical resize +5<CR>
-nnoremap <S-Down> :resize -5<CR>
-nnoremap <S-Up> :resize +5<CR>
+nnoremap <F7> :vertical resize -5<CR>
+nnoremap <F8> :vertical resize +5<CR>
+nnoremap <F9> :resize -5<CR>
+nnoremap <F10> :resize +5<CR>
 
 " formatting
 set nowrap

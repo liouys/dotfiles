@@ -104,6 +104,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
 Plug 'vim-scripts/Sass'
 Plug 'gko/vim-coloresque'
+Plug 'posva/vim-vue'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

@@ -63,6 +63,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_leader_key = ','
 Plug 'terryma/vim-multiple-cursors'
+Plug 'kshenoy/vim-signature'
 
 " --// togglable panels
 Plug 'scrooloose/nerdtree'
@@ -88,15 +89,14 @@ Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'marijnh/tern_for_vim'
 Plug 'othree/javascript-libraries-syntax.vim'
-
+Plug 'davewongillies/vim-gradle'
+Plug 'vim-scripts/groovy.vim'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/c.vim'
-Plug 'groovy.vim'
-Plug 'vim-gradle'
 Plug 'hhys/yaml-vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'HerringtomDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'clausreinke/typescript-tools.vim'
 Plug 'vim-scripts/nginx.vim'
@@ -123,7 +123,6 @@ let g:neocomplete#enable_at_startup = 1
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'L9' " function utility library.
 Plug 'Shougo/unite.vim'
 
 " --// configure management tools 
@@ -287,7 +286,7 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:session_autoload="no"
 let g:session_autosave="no"
 let g:session_command_aliase = 1
-"colorscheme candyman
+colorscheme SlateDark
 
 " tabs
 nmap <leader>tn :tabnew<cr>

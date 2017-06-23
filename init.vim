@@ -121,7 +121,6 @@ Plug 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
 
 " --// snippets
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'Shougo/unite.vim'

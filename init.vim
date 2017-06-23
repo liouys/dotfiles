@@ -105,6 +105,7 @@ Plug 'tpope/vim-haml'
 Plug 'vim-scripts/Sass'
 Plug 'gko/vim-coloresque'
 Plug 'posva/vim-vue'
+Plug 'cakebaker/scss-syntax.vim'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

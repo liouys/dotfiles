@@ -14,20 +14,11 @@ fi
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/workspace/gocodes
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/apps/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+# brew config
+export HOMEBREW_NO_AUTO_UPDATE="1"
 
-export ANTLY_HOME=~/dev/antly
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export GRADLE_HOME=/usr/local/Cellar/gradle/2.12/libexec
+# JENKINS CONFIGURE
+export JENKINS_TOOLS=~/work/JenkinsCI/jenkins-tools
 
-# -- gradle uploadArchives task variables.
-export PUBLISH_URL=http://localhost:8081/content/repositories/ctg-release
-export PUBLISH_USER=admin
-export PUBLISH_PASSWORD=Nexus@2016
-
-export PATH=~/.npm-global/bin:$PATH
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# DOCKER CONFIG
+export DOCKER_HOST=tcp://10.34.57.11:2377

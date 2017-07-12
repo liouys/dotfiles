@@ -87,7 +87,6 @@ Plug 'majutsushi/tagbar'
 " --//language bundle
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
-Plug 'marijnh/tern_for_vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'davewongillies/vim-gradle'
 Plug 'vim-scripts/groovy.vim'
@@ -132,6 +131,10 @@ Plug 'pearofducks/ansible-vim'
 
 " -- for fun...
 Plug 'uguu-org/vim-matrix-screensaver'
+
+" -- new feature...
+Plug 'gregsexton/gitv'
+Plug 'benmills/vimux'
 
 call plug#end()
 

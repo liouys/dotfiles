@@ -12,3 +12,11 @@ ln -s ~/.config/nvim/plugged ~/.vim/plugged
 
 ln -s `pwd`/init.vim ~/.config/nvim/init.vim
 ln -s `pwd`/init.vim ~/.vimrc
+
+# install vim in macOS
+
+brew install vim --with-lua --with-override-system-vi --with-python3
+
+# Troubleshooting
+
+> brew install reattach-to-user-namespace

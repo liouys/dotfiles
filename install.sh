@@ -10,3 +10,4 @@ ln -s `pwd`/init.vim ~/.config/nvim/init.vim
 ln -s `pwd`/init.vim ~/.vimrc
 ln -s `pwd`/gitconfig ~/.gitconfig
 ln -s `pwd`/tmux.conf ~/.tmux.conf
+ln -s `pwd`/tmux.conf.local ~/.tmux.conf.local

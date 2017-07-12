@@ -87,7 +87,6 @@ Plug 'majutsushi/tagbar'
 " --//language bundle
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
-Plug 'marijnh/tern_for_vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'davewongillies/vim-gradle'
 Plug 'vim-scripts/groovy.vim'

@@ -106,6 +106,7 @@ Plug 'gko/vim-coloresque'
 Plug 'posva/vim-vue'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'google/vim-jsonnet'
+Plug 'bazelbuild/vim-ft-bzl'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

@@ -128,6 +128,7 @@ Plug 'Shougo/unite.vim'
 " --// configure management tools 
 Plug 'saltstack/salt-vim'
 Plug 'pearofducks/ansible-vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " -- for fun...
 Plug 'uguu-org/vim-matrix-screensaver'

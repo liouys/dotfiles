@@ -17,8 +17,3 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # brew config
 export HOMEBREW_NO_AUTO_UPDATE="1"
 
-# JENKINS CONFIGURE
-export JENKINS_TOOLS=~/work/JenkinsCI/jenkins-tools
-
-# DOCKER CONFIG
-export DOCKER_HOST=tcp://10.34.57.11:2377

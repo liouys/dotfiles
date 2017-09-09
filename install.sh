@@ -2,21 +2,23 @@
 PLUG_VIM_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs $PLUG_VIM_URL
 
-if [ ! -d ~/.config/nvim ]
-then
+if [ ! -d ~/.config/nvim/plugged ]; then
   mkdir -p ~/.config/nvim/plugged
-  mkdir -p ~/.vim
-  ln -s ~/.config/nvim/autoload ~/.vim/autoload
-  ln -s ~/.config/nvim/plugged ~/.vim/plugged
   ln -s `pwd`/init.vim ~/.config/nvim/init.vim
 else
   echo '--//warn: ~/.config/nvim directory is exist.'
 fi
 
+if [ ! -d ~/.vim ]; then
+  mkdir -p ~/.vim
+  ln -s ~/.config/nvim/autoload ~/.vim/autoload
+  ln -s ~/.config/nvim/plugged ~/.vim/plugged
+fi
+
 if [ ! -f ~/.vimrc ]
 then
   ln -s `pwd`/init.vim ~/.vimrc
-else:
+else
   echo '--//warn: ~/.vimrc is exists.'
 fi
 

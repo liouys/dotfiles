@@ -1,7 +1,16 @@
 [user]
 	name = Sean Ly
 	email = seanly@aliyun.com
+
 [color]
 	ui = auto
+
 [core]
 	editor = vim
+
+[github]
+	user = seanly
+
+[core]
+	excludesfile = ~/.gitignore_global
+

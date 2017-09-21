@@ -37,3 +37,5 @@ then
 else
   echo '--//warn: ~/.tmux.conf is exists.'
 fi
+
+vim +PlugInstall! +PlugClean +qall

@@ -1,6 +1,9 @@
 #!/bin/bash
 PLUG_VIM_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs $PLUG_VIM_URL
+
+if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
+  curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs $PLUG_VIM_URL
+if 
 
 if [ ! -d ~/.config/nvim/plugged ]; then
   mkdir -p ~/.config/nvim/plugged

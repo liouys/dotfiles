@@ -49,9 +49,7 @@ brew tap caskroom/drivers
 # Install Cask applications
 e_header "Installing Cask applications..."
 ### Browser ###
-#brew cask install firefox                   # Firefox browser
 brew cask install google-chrome             # Chrome browser
-#brew cask install opera                     # Opera browser
 
 ### Torrent ###
 #brew cask install qbittorrent               # Torrent client
@@ -67,7 +65,7 @@ brew cask install google-chrome             # Chrome browser
 brew cask install iterm2                    # Better terminal for macOS
 brew cask install visual-studio-code        # Code editor
 #brew cask install atom                      # Code editor
-#brew cask install sublime-text              # Code editor
+brew cask install sublime-text              # Code editor
 brew cask install dash                      # Offline documentations
 brew cask install imageoptim                # Images optimizer
 brew cask install boostnote                 # Note-taking for programmers

@@ -91,6 +91,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'davewongillies/vim-gradle'
 Plug 'vim-scripts/groovy.vim'
 Plug 'fatih/vim-go', {'for': 'go'}
+"Plug 'w0rp/ale'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/c.vim'
 Plug 'hhys/yaml-vim'
@@ -148,7 +149,7 @@ filetype plugin indent on
 
 " General
 syntax on
-set mouse=a
+set mouse=
 set clipboard=unnamed
 set history=1000
 autocmd FileType python setlocal et sta sw=4 sts=4
@@ -303,4 +304,28 @@ nmap <leader>tm : tabmove<cr>
 " switch windows
 :map <leader>w <C-w>w
 
+
+" Golang
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"
+" Golang ale(github.com/w0rp/ale) lint
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '!'
+let g:airline#extensions#ale#enabled = 1
+
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
 

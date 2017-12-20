@@ -108,6 +108,7 @@ Plug 'posva/vim-vue'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'google/vim-jsonnet'
 Plug 'bazelbuild/vim-ft-bzl'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

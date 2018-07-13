@@ -20,6 +20,11 @@ let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height = 20
 let g:ctrlp_match_window_reversed = 1
 let g:ctrlp_switch_buffer = 'e'
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 nnoremap <leader>ev :CtrlP app/views<cr>
 nnoremap <leader>ec :CtrlP app/controllers<cr>
 nnoremap <leader>em :CtrlP app/models<cr>
@@ -108,6 +113,7 @@ Plug 'posva/vim-vue'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'google/vim-jsonnet'
 Plug 'bazelbuild/vim-ft-bzl'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

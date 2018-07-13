@@ -322,6 +322,8 @@ let g:go_highlight_types = 1
 
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
+let g:go_version_warning = 0
+let g:go_get_update = 0
 " Golang ale(github.com/w0rp/ale) lint
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '!'

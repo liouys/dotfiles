@@ -3,7 +3,7 @@
 # Comment (with #) what should not be installed and add the applications you want to install.
 
 
-source ./install/utils.sh
+source ./macos_install/utils.sh
 
 # Install Homebrew
 e_header "Installing Homebrew for you."

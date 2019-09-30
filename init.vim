@@ -114,6 +114,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'google/vim-jsonnet'
 Plug 'bazelbuild/vim-ft-bzl'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'hashivim/vim-terraform'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'

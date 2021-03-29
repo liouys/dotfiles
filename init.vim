@@ -1,5 +1,3 @@
-" everything start here...
-
 " 设置文件编码
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -95,7 +93,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'davewongillies/vim-gradle'
 Plug 'vim-scripts/groovy.vim'
-Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'fatih/vim-go'
 "Plug 'w0rp/ale'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/c.vim'
@@ -115,6 +113,8 @@ Plug 'google/vim-jsonnet'
 Plug 'bazelbuild/vim-ft-bzl'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'hashivim/vim-terraform'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'udalov/kotlin-vim'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'
@@ -145,6 +145,14 @@ Plug 'uguu-org/vim-matrix-screensaver'
 " -- new feature...
 Plug 'gregsexton/gitv'
 Plug 'benmills/vimux'
+Plug 'tsandall/vim-rego'
+Plug 'vimcn/vimcdoc'
+Plug 'ayu-theme/ayu-vim' " or other package manager
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+Plug 'jjo/vim-cue'
 
 call plug#end()
 
@@ -300,7 +308,9 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:session_autoload="no"
 let g:session_autosave="no"
 let g:session_command_aliase = 1
-colorscheme SlateDark
+"colorscheme ayu
+"colorscheme SlateDark
+colorscheme Blue2
 
 " tabs
 nmap <leader>tn :tabnew<cr>

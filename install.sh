@@ -2,7 +2,16 @@
 PLUG_VIM_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs $PLUG_VIM_URL
 
-yum install -y neovim ctags git
+
+# centos os check
+
+FILE_EXE=/etc/redhat-release
+
+if [ -f "$FILE_EXE" ]; then
+  yum install -y neovim ctags git
+else
+  apt install -y neovim ctags git
+fi
 
 if [ ! -d ~/.config/nvim/plugged ]; then
   mkdir -p ~/.config/nvim/plugged

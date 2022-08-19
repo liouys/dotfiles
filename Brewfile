@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Reimplementation of ctags(1)

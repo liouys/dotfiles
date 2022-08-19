@@ -10,3 +10,8 @@ brew install tig git ctags
 # Troubleshooting
 
 > brew install reattach-to-user-namespace
+
+# centos
+
+yum install -y neovim ctags git
+

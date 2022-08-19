@@ -118,7 +118,6 @@ Plug 'udalov/kotlin-vim'
 
 " --// database
 Plug 'vim-scripts/SQLUtilities'
-Plug 'NagatoPain/AutoSQLUpperCase.vim'
 
 " --// autocomplete
 "Plug 'Valloric/YouCompleteMe'
@@ -153,6 +152,7 @@ set termguicolors     " enable true colors support
 let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 Plug 'jjo/vim-cue'
+Plug 'neomake/neomake'
 
 call plug#end()
 

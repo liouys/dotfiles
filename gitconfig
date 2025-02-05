@@ -13,6 +13,7 @@
 
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
 
 [push]
 	default = simple
@@ -22,3 +23,5 @@
 	sslverify = false
 [https]
 	sslverify = false
+[init]
+	defaultBranch = main
